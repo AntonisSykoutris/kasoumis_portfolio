@@ -9,6 +9,8 @@ import { TbFileCv } from 'react-icons/tb';
 import socialIcons from './icon/Social';
 import Typewriter from './ui/Typewriter';
 import emon from '/public/img/emon.webp';
+import AnimatedGridPattern from '@/components/ui/animated-grid-pattern';
+import { cn } from '@/lib/utils';
 
 import useScrollSpy from '@/hook/useScrollSpy';
 import { useInView } from 'framer-motion';
@@ -96,7 +98,16 @@ const Hero = () => {
 
   return (
     <section id='home' className='relative z-10'>
-      <div className="dark:bg-[url('/img/bg-image.svg')] bg-cover absolute z-0 w-full md:h-full aspect-square"></div>
+      <AnimatedGridPattern
+        numSquares={30}
+        maxOpacity={0.1}
+        duration={3}
+        repeatDelay={1}
+        className={cn(
+          '[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]',
+          'inset-x-0 inset-y-[-30%] h-[200%] skew-y-12'
+        )}
+      />
       <div className='lg:h-[calc(100vh-64px)] container h-full py-5 pt-16 md:py-10 lg:py-0 lg:pt-0 flex flex-wrap flex-col-reverse md:flex-row items-center justify-center overflow-hidden '>
         <motion.div
           variants={uptoDown}
