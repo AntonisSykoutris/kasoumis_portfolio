@@ -38,7 +38,7 @@ const HeroText = () => {
             }}
             initial='hidden'
             animate={textControls}
-            className='flex flex-col lg:items-center lg:gap-8 z-40  relative  md:mt-5  '
+            className='flex flex-col lg:items-center lg:gap-8 z-40  relative  '
           >
             <HeroAnimatedText charDelay={0.04} />
           </motion.div>

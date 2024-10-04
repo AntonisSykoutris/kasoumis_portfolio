@@ -26,38 +26,11 @@ const Footer = () => {
           </span>{' '}
           All rights reserved.
         </div>
-        <div className='flex gap-3 flex-nowrap'>
-          <Link
-            href='https://github.com/emonsingha209/NextJs-Tailwind-Portfolio'
-            target='_blank'
-            rel='noopener noreferrer'
-            aria-label='Star'
-            className='flex items-center gap-1 flex-nowrap '
-          >
-            <FaStar className='w-4 h-4' />
-            Star
-          </Link>
-          <Link
-            href='https://github.com/emonsingha209/NextJs-Tailwind-Portfolio/fork'
-            target='_blank'
-            rel='noopener noreferrer'
-            aria-label='Fork'
-            className='flex items-center gap-1 flex-nowrap '
-          >
-            <GoRepoForked className='w-4 h-4' />
-            Fork
-          </Link>
-        </div>
         <div>
           <ul className='flex gap-3'>
             {socialIcons.map((item, index) => (
               <li key={index}>
-                <Link
-                  href={item.link}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  aria-label={item.label}
-                >
+                <Link href={item.link} target='_blank' rel='noopener noreferrer' aria-label={item.label}>
                   <item.Icon className='md:w-6 md:h-6 w-5 h-5 transition-all duration-300 ease-in-out hover:rotate-[360deg]' />
                 </Link>
               </li>

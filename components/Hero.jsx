@@ -8,7 +8,8 @@ import { MdConnectWithoutContact } from 'react-icons/md';
 import { TbFileCv } from 'react-icons/tb';
 import socialIcons from './icon/Social';
 import Typewriter from './ui/Typewriter';
-import emon from '/public/img/emon.webp';
+import kasoumisWhite from '/public/img/kasoumis-dark.webp';
+import kasoumisDark from '/public/img/kasoumis-dark.webp';
 import AnimatedGridPattern from '@/components/ui/animated-grid-pattern';
 import { cn } from '@/lib/utils';
 
@@ -183,7 +184,7 @@ const Hero = () => {
               whileInView='animate'
               className='z-30 overflow-hidden rounded-full'
             >
-              <Image src={emon} width={600} height={600} priority alt='Kasoumis Giannis' />
+              <Image src={kasoumisWhite} width={600} height={600} priority alt='Kasoumis Giannis' />
             </motion.div>
 
             {socialIcons.map((item, index) => (
