@@ -1,14 +1,9 @@
 'use client';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useEffect, useRef, useState } from 'react';
 import SpotifyLoading from './SpotifyLoading';
+import { BorderBeam } from '@/components/ui/border-beam';
 
 import expertise from '@/public/data/expertise';
 import axios from 'axios';
@@ -122,10 +117,9 @@ const About = () => {
           whileInView='animate'
           className='leading-7 [&:not(:first-child)]:mt-6'
         >
-          I&apos;m a passionate Frontend Developer dedicated to creating
-          immersive UI experiences that resonate with users. With a keen eye for
-          detail and a love for clean code, I bring ideas to life through
-          elegant and functional interfaces.
+          I&apos;m a passionate Frontend Developer dedicated to creating immersive UI experiences that resonate with
+          users. With a keen eye for detail and a love for clean code, I bring ideas to life through elegant and
+          functional interfaces.
         </motion.p>
         <motion.h2
           variants={leftToRight}
@@ -136,13 +130,7 @@ const About = () => {
           Experties Area
         </motion.h2>
         {expertise.map((item, index) => (
-          <motion.div
-            key={index}
-            className='mt-6'
-            variants={leftToRight}
-            initial='initial'
-            whileInView='animate'
-          >
+          <motion.div key={index} className='mt-6' variants={leftToRight} initial='initial' whileInView='animate'>
             <Card className=' dark:bg-cardBg'>
               <CardHeader>
                 <CardTitle>{item.title}</CardTitle>
@@ -155,11 +143,10 @@ const About = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className='leading-7 [&:not(:first-child)]:mt-6'>
-                  {item.description}
-                </p>
+                <p className='leading-7 [&:not(:first-child)]:mt-6'>{item.description}</p>
               </CardContent>
             </Card>
+            <BorderBeam />
           </motion.div>
         ))}
       </div>
@@ -219,9 +206,7 @@ const About = () => {
                 <Card>
                   <CardHeader>
                     <CardTitle>Experience</CardTitle>
-                    <CardDescription>
-                      Gained valuable industry insights.
-                    </CardDescription>
+                    <CardDescription>Gained valuable industry insights.</CardDescription>
                   </CardHeader>
                   <CardContent className='space-y-6'>
                     <div className='grid grid-cols-1 xl:grid-cols-2 gap-3'>
@@ -235,9 +220,7 @@ const About = () => {
                         <p className='flex items-center gap-1 text-sm'>
                           <MdDateRange />3 Sept 2023 - 31 Dec 2023
                         </p>
-                        <h3 className='font-semibold leading-none tracking-wide '>
-                          Web Developer - Intern
-                        </h3>
+                        <h3 className='font-semibold leading-none tracking-wide '>Web Developer - Intern</h3>
                         <p>Aamra Infotainment Ltd.</p>
                         <div className='absolute w-0 transition-all duration-500 ease-primary group-hover:w-full h-0.5 bg-violet-500 rounded-md -bottom-2'></div>
                       </Link>
@@ -251,9 +234,7 @@ const About = () => {
                         <p className='flex items-center gap-1 text-sm'>
                           <MdDateRange />3 June 2024 - Present
                         </p>
-                        <h3 className='font-semibold leading-none tracking-wide '>
-                          Intern Frontend Developer
-                        </h3>
+                        <h3 className='font-semibold leading-none tracking-wide '>Intern Frontend Developer</h3>
                         <p>SJ Innovation LLC</p>
                         <div className='absolute w-0 transition-all duration-500 ease-primary group-hover:w-full h-0.5 bg-violet-500 rounded-md -bottom-2'></div>
                       </Link>
@@ -265,9 +246,7 @@ const About = () => {
                 <Card>
                   <CardHeader>
                     <CardTitle>Education</CardTitle>
-                    <CardDescription>
-                      Academic Background and Qualifications.
-                    </CardDescription>
+                    <CardDescription>Academic Background and Qualifications.</CardDescription>
                   </CardHeader>
                   <CardContent className='space-y-6'>
                     <Link
