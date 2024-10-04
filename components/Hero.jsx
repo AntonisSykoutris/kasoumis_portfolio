@@ -66,7 +66,7 @@ const Hero = () => {
 
   const { scrollToSection } = useScrollSpy();
 
-  const handleClick = (item) => {
+  const handleClick = item => {
     scrollToSection(item);
   };
 
@@ -79,15 +79,13 @@ const Hero = () => {
         const rotation = 360 / circles.length;
 
         circles.forEach((circle, i) => {
-          const value = `rotate(${
-            i * rotation
-          }deg) translate(${radius}px) rotate(-${i * rotation}deg)`;
+          const value = `rotate(${i * rotation}deg) translate(${radius}px) rotate(-${i * rotation}deg)`;
           circle.style.transform = value;
         });
       }
     } else {
       if (circles.length > 0) {
-        circles.forEach((circle) => {
+        circles.forEach(circle => {
           circle.style.transform = '';
         });
       }
@@ -117,7 +115,7 @@ const Hero = () => {
         >
           <motion.h1
             variants={uptoDownItem}
-            className='h-16 text-4xl font-extrabold tracking-tight text-left text-transparent capitalize xs:text-5xl md:h-20 md:text-6xl lg:text-7xl bg-gradient-to-r from-blue-500 via-blue-400 to-blue-600 bg-clip-text w-fit scroll-m-20'
+            className='text-4xl font-extrabold tracking-tight text-left text-transparent capitalize xs:text-5xl md:h-20 md:text-6xl lg:text-7xl bg-gradient-to-r from-blue-500 via-blue-400 to-blue-600 bg-clip-text w-fit scroll-m-20'
           >
             Kasoumis Giannis
           </motion.h1>
@@ -126,23 +124,15 @@ const Hero = () => {
             className='pb-2 text-3xl font-semibold tracking-tight border-b min-h-12 lg:mt-3 border-b-border scroll-m-20 first:mt-0'
           >
             <Typewriter
-              texts={[
-                `Frontend Developer${multipleSpaces}`,
-                `Converting Ideas to User Interface${multipleSpaces}`,
-              ]}
+              texts={[`Frontend Developer${multipleSpaces}`, `Converting Ideas to User Interface${multipleSpaces}`]}
               speed={100}
               isInView={isInView}
             />
           </motion.h2>
-          <motion.p
-            variants={uptoDownItem}
-            className='text-lg lg:text-justify leading-7 [&:not(:first-child)]:mt-3'
-          >
-            As a Frontend Developer, I specialize in bringing ideas to life
-            through captivating user interfaces. With expertise in CSS,
-            Bootstrap, and Tailwind CSS, I meticulously craft designs that
-            exceed expectations. Every line of code is dedicated to transforming
-            concepts into visually stunning digital experiences.
+          <motion.p variants={uptoDownItem} className='text-lg lg:text-justify leading-7 [&:not(:first-child)]:mt-3'>
+            As a Frontend Developer, I specialize in bringing ideas to life through captivating user interfaces. With
+            expertise in CSS, Bootstrap, and Tailwind CSS, I meticulously craft designs that exceed expectations. Every
+            line of code is dedicated to transforming concepts into visually stunning digital experiences.
           </motion.p>
           <motion.div
             variants={uptoDownItem}
@@ -193,13 +183,7 @@ const Hero = () => {
               whileInView='animate'
               className='z-30 overflow-hidden rounded-full'
             >
-              <Image
-                src={emon}
-                width={600}
-                height={600}
-                priority
-                alt='Kasoumis Giannis'
-              />
+              <Image src={emon} width={600} height={600} priority alt='Kasoumis Giannis' />
             </motion.div>
 
             {socialIcons.map((item, index) => (
@@ -209,7 +193,7 @@ const Hero = () => {
                 rel='noopener noreferrer'
                 key={index}
                 className='absolute z-10 grid w-12 h-12 transition-transform duration-1000 rounded-full bg-border dark:bg-border ease-primary place-items-center group'
-                ref={(el) => (circlesRefs.current[index] = el)}
+                ref={el => (circlesRefs.current[index] = el)}
                 aria-label={item.label}
               >
                 <div className='z-10 grid w-full h-full bg-gray-800 rounded-full place-items-center'>

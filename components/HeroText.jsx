@@ -24,7 +24,7 @@ const HeroText = () => {
   }, [textControls]);
 
   return (
-    <div className='flex flex-col mx-10 mb-10 lg:mb-0  md:w-fit  h-[16rem] xs:h-[18rem] md:h-[16rem] lg:h-[26rem] 1xl:h-[36.5rem]  lg:mt-10 text-center  '>
+    <div className='flex flex-col md:mx-10 mb-10 lg:mb-0  md:w-fit  h-[16rem] xs:h-[18rem] md:h-[16rem] lg:h-[26rem] 1xl:h-[36.5rem]  lg:mt-10 text-center  '>
       <div ref={ref} className='lg:mt-6 h-full'>
         <div className='flex flex-col gap-10'>
           <motion.div
@@ -38,7 +38,7 @@ const HeroText = () => {
             }}
             initial='hidden'
             animate={textControls}
-            className='flex flex-col lg:items-center lg:gap-8 z-40  relative  mt-10  '
+            className='flex flex-col lg:items-center lg:gap-8 z-40  relative  md:mt-5  '
           >
             <HeroAnimatedText charDelay={0.04} />
           </motion.div>

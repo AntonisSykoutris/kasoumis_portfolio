@@ -76,7 +76,7 @@ const Navbar = () => {
     };
   }, [active]);
 
-  const handleClick = (item) => {
+  const handleClick = item => {
     scrollToSection(item);
     setActive(false);
   };
@@ -87,7 +87,7 @@ const Navbar = () => {
       className='sticky top-0 z-50 flex items-center justify-around w-full h-16 shadow-md shadow-ring/10 backdrop-blur-md '
     >
       <Link href='/' scroll={false} onClick={() => handleClick('home')}>
-        <span className=' font-bold text-2xl'>Giannis Kasoumis</span>
+        <span className=' font-bold text-lg md:text-2xl'>Giannis Kasoumis</span>
       </Link>
       <div className='absolute top-[70px]  justify-center w-full hidden md:w-fit md:block md:static left-0 '>
         <NavbarItem />
@@ -99,10 +99,7 @@ const Navbar = () => {
           </Link>
         </Button>
         <Button asChild variant='ghost' size='icon'>
-          <Link
-            href='mailto:emonsingha209@gmail.com'
-            aria-label='Contact with me via mail'
-          >
+          <Link href='mailto:emonsingha209@gmail.com' aria-label='Contact with me via mail'>
             <BiLogoGmail className='w-6 h-6' />
           </Link>
         </Button>
@@ -117,11 +114,7 @@ const Navbar = () => {
             active ? 'block' : 'hidden'
           }`}
         >
-          <motion.ul
-            variants={ulVariants}
-            animate={active ? 'open' : 'closed'}
-            className='flex space-y-8 uppercase'
-          >
+          <motion.ul variants={ulVariants} animate={active ? 'open' : 'closed'} className='flex space-y-8 uppercase'>
             {navData.map((item, index) => (
               <motion.li
                 key={index}
