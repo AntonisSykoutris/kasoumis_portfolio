@@ -106,7 +106,7 @@ const Contact = () => {
   return (
     <div className='relative z-10 mt-5'>
       <BackgroundBeamsWithCollision className={' container'}>
-        <div className='flex md:flex-row flex-col py-8 gap-5 md:gap-0 overflow-hidden container w-fit'>
+        <div className='flex md:flex-row flex-col max-sm:px-0 py-8 gap-5 md:gap-0 overflow-hidden container w-fit'>
           <motion.div variants={contactRight} initial='initial' whileInView='animate'>
             <Card className='w-full xns:w-11/12 '>
               <CardHeader>

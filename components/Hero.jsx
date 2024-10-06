@@ -14,6 +14,8 @@ import AnimatedGridPattern from '@/components/ui/animated-grid-pattern';
 import { cn } from '@/lib/utils';
 
 import useScrollSpy from '@/hook/useScrollSpy';
+import useMobileDetect from '@/hook/useMobileDetect';
+
 import { useInView } from 'framer-motion';
 import Image from 'next/image';
 
@@ -66,6 +68,7 @@ const Hero = () => {
   const isInView = useInView(containerRef);
 
   const { scrollToSection } = useScrollSpy();
+  const { isMobile, isTablet } = useMobileDetect();
 
   const handleClick = item => {
     scrollToSection(item);
@@ -154,22 +157,43 @@ const Hero = () => {
               </Link>
             </Button>
             <Button asChild size='hero' className='bg-card'>
-              <Link
-                href='/resume'
-                className='relative dark:bg-cardBg overflow-hidden transition-all border-2 border-accent-foreground group'
-                aria-label='Read more about me in Resume'
-              >
-                <span className='absolute z-10 w-full h-full transition-all duration-300 ease-in-out -translate-x-full group-hover:translate-x-0 bg-accent-foreground'></span>
-                <div className='z-20 flex items-center justify-center gap-1 text-base font-bold tracking-widest uppercase md:gap-3 md:text-xl text-primary group-hover:text-muted font-oswald'>
-                  Get Resume
-                  <div className='relative w-6 h-6 '>
-                    <span className='absolute w-12 h-12 -top-1/2 -left-1/2 border rounded-full opacity-0 pointer-events-none border-primary group-hover:border-muted animate-ringOne -z-10'></span>
-                    <span className='absolute w-12 h-12 -top-1/2 -left-1/2 border rounded-full opacity-0 pointer-events-none border-primary group-hover:border-muted animate-ringTwo -z-10'></span>
-                    <span className='absolute w-12 h-12 -top-1/2 -left-1/2 border rounded-full opacity-0 pointer-events-none border-primary group-hover:border-muted animate-ringThree -z-10'></span>
-                    <TbFileCv className='w-6 h-6 bg-card rounded-full z-40 group-hover:bg-accent-foreground' />
+              {isMobile ? (
+                <a
+                  className='relative dark:bg-cardBg overflow-hidden transition-all border-2 border-accent-foreground group'
+                  href='/resume/Resume_Kasoumis_Giannis.pdf'
+                  download
+                  rel='noopener'
+                  aria-label='Download Resume'
+                >
+                  <span className='absolute z-10 w-full h-full transition-all duration-300 ease-in-out -translate-x-full group-hover:translate-x-0 bg-accent-foreground'></span>
+                  <div className='z-20 flex items-center justify-center gap-1 text-base font-bold tracking-widest uppercase md:gap-3 md:text-xl text-primary group-hover:text-muted font-oswald'>
+                    Get Resume
+                    <div className='relative w-6 h-6 '>
+                      <span className='absolute w-12 h-12 -top-1/2 -left-1/2 border rounded-full opacity-0 pointer-events-none border-primary group-hover:border-muted animate-ringOne -z-10'></span>
+                      <span className='absolute w-12 h-12 -top-1/2 -left-1/2 border rounded-full opacity-0 pointer-events-none border-primary group-hover:border-muted animate-ringTwo -z-10'></span>
+                      <span className='absolute w-12 h-12 -top-1/2 -left-1/2 border rounded-full opacity-0 pointer-events-none border-primary group-hover:border-muted animate-ringThree -z-10'></span>
+                      <TbFileCv className='w-6 h-6 bg-card rounded-full z-40 group-hover:bg-accent-foreground' />
+                    </div>
                   </div>
-                </div>
-              </Link>
+                </a>
+              ) : (
+                <Link
+                  href='/resume'
+                  className='relative dark:bg-cardBg overflow-hidden transition-all border-2 border-accent-foreground group'
+                  aria-label='Read more about me in Resume'
+                >
+                  <span className='absolute z-10 w-full h-full transition-all duration-300 ease-in-out -translate-x-full group-hover:translate-x-0 bg-accent-foreground'></span>
+                  <div className='z-20 flex items-center justify-center gap-1 text-base font-bold tracking-widest uppercase md:gap-3 md:text-xl text-primary group-hover:text-muted font-oswald'>
+                    Get Resume
+                    <div className='relative w-6 h-6 '>
+                      <span className='absolute w-12 h-12 -top-1/2 -left-1/2 border rounded-full opacity-0 pointer-events-none border-primary group-hover:border-muted animate-ringOne -z-10'></span>
+                      <span className='absolute w-12 h-12 -top-1/2 -left-1/2 border rounded-full opacity-0 pointer-events-none border-primary group-hover:border-muted animate-ringTwo -z-10'></span>
+                      <span className='absolute w-12 h-12 -top-1/2 -left-1/2 border rounded-full opacity-0 pointer-events-none border-primary group-hover:border-muted animate-ringThree -z-10'></span>
+                      <TbFileCv className='w-6 h-6 bg-card rounded-full z-40 group-hover:bg-accent-foreground' />
+                    </div>
+                  </div>
+                </Link>
+              )}
             </Button>
           </motion.div>
         </motion.div>

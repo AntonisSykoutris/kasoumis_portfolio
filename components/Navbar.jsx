@@ -8,10 +8,10 @@ import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { BiLogoGmail } from 'react-icons/bi';
 import { TbFileCv } from 'react-icons/tb';
-import letters from '../public/data/name.json';
 import NavbarItem from './NavbarItem';
 import { AnimatedHamburgerButton } from './AnimatedHamburgerButton';
 import navData from '../public/data/navData.json';
+import useMobileDetect from '@/hook/useMobileDetect';
 
 const ulVariants = {
   open: {
@@ -51,6 +51,7 @@ const liVariants = {
 
 const Navbar = () => {
   const { activeSection, scrollToSection } = useScrollSpy();
+  const { isMobile, isTablet } = useMobileDetect();
   const { theme, setTheme } = useTheme();
   const [active, setActive] = useState(false);
 
@@ -94,9 +95,15 @@ const Navbar = () => {
       </div>
       <div className='flex items-center justify-center gap-1 md:gap-3'>
         <Button asChild variant='ghost' size='icon'>
-          <Link href='/resume' aria-label='Read more about me in Resume'>
-            <TbFileCv className='w-6 h-6' />
-          </Link>
+          {isMobile ? (
+            <a href='/resume/Resume_Kasoumis_Giannis.pdf' download rel='noopener' aria-label='Download Resume'>
+              <TbFileCv className='w-6 h-6' />
+            </a>
+          ) : (
+            <Link href='/resume' aria-label='Read more about me in Resume'>
+              <TbFileCv className='w-6 h-6' />
+            </Link>
+          )}
         </Button>
         <Button asChild variant='ghost' size='icon'>
           <Link href='mailto:johnkasoumi@gmail.com' aria-label='Contact with me via mail'>

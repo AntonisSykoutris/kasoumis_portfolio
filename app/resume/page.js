@@ -11,7 +11,7 @@ export const metadata = {
     name: 'Resume',
     url: 'https://kasoumis-portfolio.vercel.app/resume',
     image: {
-      url: 'https://emonsingha.vercel.app/img/ogImage.webp',
+      url: 'https://kasoumis-portfolio.vercel.app/img/ogImage.webp',
       alt: "Kasoumis Giannis's Resume",
     },
     description:

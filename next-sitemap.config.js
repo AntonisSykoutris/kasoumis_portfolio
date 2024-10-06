@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: "https://emonsingha.vercel.app",
+  siteUrl: 'https://kasoumis-portfolio.vercel.app',
   generateRobotsTxt: true,
 };

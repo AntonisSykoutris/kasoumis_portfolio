@@ -1,3 +1,3 @@
 export const openGraphImage = {
-  images: ["https://emonsingha.vercel.app/img/ogImage.webp"],
+  images: ['https://kasoumis-portfolio.vercel.app/img/ogImage.webp'],
 };
