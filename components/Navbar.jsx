@@ -99,7 +99,7 @@ const Navbar = () => {
           </Link>
         </Button>
         <Button asChild variant='ghost' size='icon'>
-          <Link href='mailto:emonsingha209@gmail.com' aria-label='Contact with me via mail'>
+          <Link href='mailto:johnkasoumi@gmail.com' aria-label='Contact with me via mail'>
             <BiLogoGmail className='w-6 h-6' />
           </Link>
         </Button>

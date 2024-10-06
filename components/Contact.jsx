@@ -11,11 +11,11 @@ import { IoIosDoneAll, IoMdSend } from 'react-icons/io';
 import { z } from 'zod';
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import contactDetails from '@/public/data/CourseDetails';
 
 import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import { BackgroundBeamsWithCollision } from '@/components/ui/background-beams-with-collision';
 import { useRef, useState } from 'react';
 
 const formSchema = z.object({
@@ -105,76 +105,77 @@ const Contact = () => {
 
   return (
     <div className='relative z-10 mt-5'>
-      <div className="dark:bg-[url('/img/bg-image.svg')] bg-cover absolute z-0 w-full h-full rotate-180"></div>
-      <div className='flex md:flex-row flex-col py-8 gap-5 md:gap-0 overflow-hidden container w-fit'>
-        <motion.div variants={contactRight} initial='initial' whileInView='animate'>
-          <Card className='w-full xns:w-11/12 '>
-            <CardHeader>
-              <CardTitle>Get in Touch With Me</CardTitle>
-              <CardDescription>Use the form below to send me a message or ask any questions.</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <Form {...form}>
-                <form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>
-                  <FormField
-                    control={form.control}
-                    name='name'
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Name</FormLabel>
-                        <FormControl>
-                          <Input placeholder='Your Name' {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name='email'
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Email</FormLabel>
-                        <FormControl>
-                          <Input type='email' placeholder='you@example.com' {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name='message'
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Message</FormLabel>
-                        <FormControl>
-                          <Textarea rows='4' placeholder='Your Message...' {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <div className='flex justify-center w-full'>
-                    <Button type='submit' className='w-full xns:w-3/5' disabled={isLoading}>
-                      {isLoading ? (
-                        <>
-                          <FaHourglassEnd className='w-4 h-4 mr-2 animate-spin' /> Sending...
-                        </>
-                      ) : (
-                        <>
-                          Send Message
-                          <IoMdSend className='w-4 h-4 ml-2' />
-                        </>
+      <BackgroundBeamsWithCollision className={' container'}>
+        <div className='flex md:flex-row flex-col py-8 gap-5 md:gap-0 overflow-hidden container w-fit'>
+          <motion.div variants={contactRight} initial='initial' whileInView='animate'>
+            <Card className='w-full xns:w-11/12 '>
+              <CardHeader>
+                <CardTitle>Get in Touch With Me</CardTitle>
+                <CardDescription>Use the form below to send me a message or ask any questions.</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Form {...form}>
+                  <form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>
+                    <FormField
+                      control={form.control}
+                      name='name'
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Name</FormLabel>
+                          <FormControl>
+                            <Input placeholder='Your Name' {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
                       )}
-                    </Button>
-                  </div>
-                </form>
-              </Form>
-            </CardContent>
-          </Card>
-        </motion.div>
-      </div>
+                    />
+                    <FormField
+                      control={form.control}
+                      name='email'
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Email</FormLabel>
+                          <FormControl>
+                            <Input type='email' placeholder='you@example.com' {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name='message'
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Message</FormLabel>
+                          <FormControl>
+                            <Textarea rows='4' placeholder='Your Message...' {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <div className='flex justify-center w-full'>
+                      <Button type='submit' className='w-full xns:w-3/5' disabled={isLoading}>
+                        {isLoading ? (
+                          <>
+                            <FaHourglassEnd className='w-4 h-4 mr-2 animate-spin' /> Sending...
+                          </>
+                        ) : (
+                          <>
+                            Send Message
+                            <IoMdSend className='w-4 h-4 ml-2' />
+                          </>
+                        )}
+                      </Button>
+                    </div>
+                  </form>
+                </Form>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </BackgroundBeamsWithCollision>
     </div>
   );
 };

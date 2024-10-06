@@ -13,29 +13,32 @@ import { MdEmail } from 'react-icons/md';
 const socialIcons = [
   {
     Icon: FaLinkedin,
-    link: 'https://www.linkedin.com/in/emon-singha209/',
+    link: 'https://www.linkedin.com/in/giannis-kasoumis/',
     label: 'Linkedin',
   },
-  { Icon: FaGithub, link: 'https://github.com/emonsingha209', label: 'Github' },
-  { Icon: FaWhatsapp, link: 'https://wa.me/+8801743217209', label: 'Whatsapp' },
   {
     Icon: FaFacebook,
-    link: 'https://www.facebook.com/thounaojam.emon',
+    link: 'https://www.facebook.com/Giannis Kasoumis',
     label: 'Facebook',
   },
   {
     Icon: FaFacebookMessenger,
-    link: 'https://m.me/thounaojam.emon',
+    link: 'https://m.me/Giannis Kasoumis',
+    label: 'Messanger',
+  },
+  {
+    Icon: FaTwitter,
+    link: 'https://m.me/Giannis Kasoumis',
     label: 'Messanger',
   },
   {
     Icon: FaInstagram,
-    link: 'https://www.instagram.com/thounaojam_emon/',
+    link: 'https://www.instagram.com/giannis_kasoumis/',
     label: 'Instagram',
   },
   {
     Icon: MdEmail,
-    link: 'mailto:emonsingha209@gmail.com',
+    link: 'mailto:johnkasoumi@gmail.com',
     label: 'Mail',
   },
 ];

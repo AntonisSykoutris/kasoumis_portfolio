@@ -7,7 +7,7 @@ import Test from '@/components/Test';
 
 export default function Home() {
   return (
-    <main>
+    <main className=' max-sm:overflow-x-hidden'>
       <Hero />
       <About />
       <Project />

@@ -1,8 +1,7 @@
 import Link from 'next/link';
-import { FaRegCopyright, FaStar } from 'react-icons/fa';
-import { GoRepoForked } from 'react-icons/go';
-
+import { FaRegCopyright } from 'react-icons/fa';
 import socialIcons from './icon/Social';
+
 const Footer = () => {
   return (
     <>
@@ -16,7 +15,7 @@ const Footer = () => {
           <FaRegCopyright className='w-4 h-4' /> 2024{' '}
           <span>
             <Link
-              href='https://www.linkedin.com/in/emon-singha209/'
+              href='https://www.linkedin.com/in/giannis-kasoumis/'
               target='_blank'
               rel='noopener noreferrer'
               aria-label='Linkedin Via Credit'

@@ -164,30 +164,6 @@ const About = () => {
             whileInView='animate'
             className='w-full space-y-5 md:w-4/5 '
           >
-            {/* <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              className="flex justify-center"
-            >
-              <div>
-                <p className="mb-3 font-semibold leading-none tracking-wider text-lg md:text-xl font-oswald border-b pb-2">
-                  Currently Coding & Listening to:
-                </p>
-                <div className="w-80 h-[100px]">
-                  {spotifyData && spotifyData.startsWith("<svg") ? (
-                    <SvgRenderer svgContent={spotifyData} />
-                  ) : spotifyData && spotifyData.startsWith("<!DOCTYPE") ? (
-                    <div className="w-full h-full flex justify-center items-center border rounded-md text-gray-300 font-oswald">
-                      <p>Advertisements are playing on Spotify.</p>
-                    </div>
-                  ) : (
-                    <SpotifyLoading />
-                  )}
-                </div>
-              </div>
-            </motion.div> */}
-
             <Marquee pauseOnHover>
               <ul className='flex gap-5 pr-5 text-5xl flex-nowrap cursor-grabbing'>
                 {icons.map((IconSlider, iconIndex) => (
