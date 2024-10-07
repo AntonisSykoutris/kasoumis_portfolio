@@ -121,16 +121,16 @@ const Hero = () => {
         >
           <motion.h1
             variants={uptoDownItem}
-            className='text-4xl font-extrabold tracking-tight text-left text-transparent capitalize xs:text-5xl md:h-20 md:text-6xl lg:text-7xl bg-gradient-to-r from-[#8b5cf6] via-[#ffaa40] to-[#8b5cf6] bg-clip-text w-fit scroll-m-20'
+            className=' max-xs:text-2xl text-4xl font-extrabold tracking-tight text-left text-transparent capitalize md:h-20 md:text-6xl lg:text-7xl bg-gradient-to-r from-[#8b5cf6] via-[#ffaa40] to-[#8b5cf6] bg-clip-text w-fit scroll-m-20'
           >
             {HERO_NAME}
           </motion.h1>
           <motion.h2
             variants={uptoDownItem}
-            className='pb-2 text-3xl flex items-center font-semibold tracking-tight border-b min-h-12 lg:mt-3 border-b-border scroll-m-20 first:mt-0'
+            className='pb-2 max-xs:text-lg text-xl md:text-3xl flex items-center font-semibold tracking-tight border-b min-h-12 lg:mt-3 border-b-border scroll-m-20 first:mt-0'
           >
             {HERO_SUBTITLE}&nbsp;
-            <SparklesText sparklesCount={5} className={'text-3xl  tracking-tight'} text='Product Manager' />
+            <SparklesText sparklesCount={5} className={'text-xl md:text-3xl  tracking-tight'} text='Product Manager' />
           </motion.h2>
           <motion.p variants={uptoDownItem} className='text-lg lg:text-justify leading-7 [&:not(:first-child)]:mt-3'>
             {HERO_DESCRIPTION}
