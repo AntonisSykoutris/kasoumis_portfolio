@@ -11,9 +11,9 @@ const Footer = () => {
         </div>
       </div>
       <footer className='container flex flex-col-reverse md:flex-row items-center justify-center gap-3 py-3 text-sm border-t md:justify-between border-t-border'>
-        <div className='flex items-center gap-1 flex-nowrap '>
+        <div className='flex items-center gap-1 flex-nowrap text-nowrap '>
           <FaRegCopyright className='w-4 h-4' /> 2024 Created By
-          <span className=' text-base font-bold underline underline-offset-1 bg-gradient-to-r from-[#8b5cf6] via-[#ffaa40] to-[#8b5cf6] bg-clip-text text-transparent  decoration-foreground transition-all duration-300 hover:decoration-[#8b5cf6]'>
+          <span className='text-base font-bold underline underline-offset-1 bg-gradient-to-r from-[#8b5cf6] via-[#ffaa40] to-[#8b5cf6] bg-clip-text text-transparent  decoration-foreground transition-all duration-300 hover:decoration-[#8b5cf6]'>
             <Link
               href='https://sykoutris-portfolio-eight.vercel.app/'
               target='_blank'
