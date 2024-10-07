@@ -1,3 +1,7 @@
+export const CERTIFICATIONS_TITLE = 'Certifications';
+
+export const CERTIFICATIONS_SUBTITLE = 'Leveling Up: My Stack of Certifications!';
+
 export const certificationsData = [
   {
     id: '1',

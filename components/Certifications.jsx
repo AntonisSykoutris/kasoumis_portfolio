@@ -8,7 +8,7 @@ import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carouse
 import { TbCertificate } from 'react-icons/tb';
 import { Button } from '@/components/ui/button';
 import useMobileDetect from '@/hook/useMobileDetect';
-import { certificationsData } from '@/public/data/certifications';
+import { CERTIFICATIONS_SUBTITLE, CERTIFICATIONS_TITLE, certificationsData } from '@/public/data/certifications';
 
 const containerTitle = {
   hidden: { opacity: 0, scale: 0 },
@@ -37,9 +37,9 @@ const Project = () => {
   return (
     <section id='certifications' className='py-5 md:mt-5 space-y-8 container'>
       <motion.div variants={containerTitle} initial='hidden' whileInView='visible'>
-        <h1 className='text-4xl font-extrabold tracking-tight scroll-m-20 lg:text-5xl'>Projects</h1>
+        <h1 className='text-4xl font-extrabold tracking-tight scroll-m-20 lg:text-5xl'>{CERTIFICATIONS_TITLE}</h1>
         <h2 className='pb-2 mt-5 text-3xl font-semibold tracking-tight transition-colors border-b md:mt-10 scroll-m-20 first:mt-0'>
-          Crafting the Web: A Showcase of My Web Development Projects
+          {CERTIFICATIONS_SUBTITLE}
         </h2>
       </motion.div>
       <motion.div variants={projectItem} initial='hidden' whileInView='visible' className=' cursor-grab'>
