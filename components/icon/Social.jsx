@@ -1,13 +1,4 @@
-import {
-  FaFacebook,
-  FaFacebookMessenger,
-  FaGithub,
-  FaInstagram,
-  FaLinkedin,
-  FaTwitter,
-  FaWhatsapp,
-} from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaFacebook, FaFacebookMessenger, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
 const socialIcons = [

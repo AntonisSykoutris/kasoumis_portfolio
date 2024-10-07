@@ -18,6 +18,7 @@ import useMobileDetect from '@/hook/useMobileDetect';
 
 import { useInView } from 'framer-motion';
 import Image from 'next/image';
+import { HERO_NAME, HERO_DESCRIPTION } from '@/public/data/hero';
 
 const uptoDown = {
   initial: {
@@ -121,7 +122,7 @@ const Hero = () => {
             variants={uptoDownItem}
             className='text-4xl font-extrabold tracking-tight text-left text-transparent capitalize xs:text-5xl md:h-20 md:text-6xl lg:text-7xl bg-gradient-to-r from-blue-500 via-blue-400 to-blue-600 bg-clip-text w-fit scroll-m-20'
           >
-            Kasoumis Giannis
+            {HERO_NAME}
           </motion.h1>
           <motion.h2
             variants={uptoDownItem}
@@ -134,9 +135,7 @@ const Hero = () => {
             />
           </motion.h2>
           <motion.p variants={uptoDownItem} className='text-lg lg:text-justify leading-7 [&:not(:first-child)]:mt-3'>
-            As a Frontend Developer, I specialize in bringing ideas to life through captivating user interfaces. With
-            expertise in CSS, Bootstrap, and Tailwind CSS, I meticulously craft designs that exceed expectations. Every
-            line of code is dedicated to transforming concepts into visually stunning digital experiences.
+            {HERO_DESCRIPTION}
           </motion.p>
           <motion.div
             variants={uptoDownItem}

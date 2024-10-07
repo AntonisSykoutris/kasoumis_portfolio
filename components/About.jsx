@@ -2,17 +2,16 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useEffect, useRef, useState } from 'react';
-import SpotifyLoading from './SpotifyLoading';
 import { BorderBeam } from '@/components/ui/border-beam';
 
-import expertise from '@/public/data/expertise';
-import axios from 'axios';
 import { motion } from 'framer-motion';
 import Marquee from 'react-fast-marquee';
 import { MdDateRange } from 'react-icons/md';
-import SvgRenderer from './SvgRenderer';
 import icons from './icon/Skill';
 import Link from 'next/link';
+import { ABOUT_DESCRIPTION, ABOUT_SUBTITLE, ABOUT_TITLE } from '@/public/data/about';
+
+import { educationData, experienceData, EXPERTIES } from '@/public/data/expertise';
 
 const leftToRight = {
   initial: {
@@ -50,26 +49,8 @@ const About = () => {
   const divRef = useRef(null);
   const [divHeight, setDivHeight] = useState(0);
   const [screenHeight, setScreenHeight] = useState(0);
-  // const [spotifyData, setSpotifyData] = useState(null);
 
   useEffect(() => {
-    // const fetchData = async () => {
-    //   try {
-    //     const response = await axios.get("/api/spotify", {
-    //       headers: {
-    //         "Cache-Control": "no-cache",
-    //         Pragma: "no-cache",
-    //         Expires: "0",
-    //       },
-    //     });
-    //     setSpotifyData(response.data);
-    //   } catch (error) {
-    //     console.error("Error fetching data:", error);
-    //   }
-    // };
-
-    // fetchData();
-
     const updateDimensions = () => {
       setScreenHeight(window.innerHeight - 72);
     };
@@ -101,7 +82,7 @@ const About = () => {
           whileInView='animate'
           className='text-4xl font-extrabold tracking-tight scroll-m-20 lg:text-5xl'
         >
-          About Me
+          {ABOUT_TITLE}
         </motion.h1>
         <motion.h2
           variants={leftToRight}
@@ -109,27 +90,22 @@ const About = () => {
           whileInView='animate'
           className='pb-2 mt-8 text-3xl font-semibold tracking-tight transition-colors border-b md:mt-10 scroll-m-20 first:mt-0'
         >
-          Hello, I&apos;m Kasoumis Giannis
+          {ABOUT_SUBTITLE}
         </motion.h2>
         <motion.p
           variants={leftToRight}
           initial='initial'
           whileInView='animate'
           className='leading-7 [&:not(:first-child)]:mt-6'
-        >
-          I&apos;m a passionate Frontend Developer dedicated to creating immersive UI experiences that resonate with
-          users. With a keen eye for detail and a love for clean code, I bring ideas to life through elegant and
-          functional interfaces.
-        </motion.p>
+          dangerouslySetInnerHTML={{ __html: ABOUT_DESCRIPTION }}
+        ></motion.p>
         <motion.h2
           variants={leftToRight}
           initial='initial'
           whileInView='animate'
           className='pb-2 mt-10 text-3xl font-semibold tracking-tight transition-colors border-b scroll-m-20 first:mt-0'
-        >
-          Experties Area
-        </motion.h2>
-        {expertise.map((item, index) => (
+        ></motion.h2>
+        {EXPERTIES.map((item, index) => (
           <motion.div key={index} className='mt-6' variants={leftToRight} initial='initial' whileInView='animate'>
             <Card className=' dark:bg-cardBg'>
               <CardHeader>
@@ -185,35 +161,32 @@ const About = () => {
                     <CardDescription>Gained valuable industry insights.</CardDescription>
                   </CardHeader>
                   <CardContent className='space-y-6'>
-                    <div className='grid grid-cols-1 xl:grid-cols-2 gap-3'>
-                      <Link
-                        href='https://aamrainfotainment.com/'
-                        className='space-y-2 group relative '
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        aria-label='AIL'
-                      >
-                        <p className='flex items-center gap-1 text-sm'>
-                          <MdDateRange />3 Sept 2023 - 31 Dec 2023
-                        </p>
-                        <h3 className='font-semibold leading-none tracking-wide '>Web Developer - Intern</h3>
-                        <p>Aamra Infotainment Ltd.</p>
-                        <div className='absolute w-0 transition-all duration-500 ease-primary group-hover:w-full h-0.5 bg-violet-500 rounded-md -bottom-2'></div>
-                      </Link>
-                      <Link
-                        href='https://sjinnovation.com/'
-                        className='space-y-2 group relative'
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        aria-label='SJI'
-                      >
-                        <p className='flex items-center gap-1 text-sm'>
-                          <MdDateRange />3 June 2024 - Present
-                        </p>
-                        <h3 className='font-semibold leading-none tracking-wide '>Intern Frontend Developer</h3>
-                        <p>SJ Innovation LLC</p>
-                        <div className='absolute w-0 transition-all duration-500 ease-primary group-hover:w-full h-0.5 bg-violet-500 rounded-md -bottom-2'></div>
-                      </Link>
+                    <div className='grid grid-cols-1 xl:grid-cols-2  gap-x-5 gap-y-5'>
+                      {experienceData.map(exp => (
+                        <Link
+                          href={exp.companyLink}
+                          key={exp.id}
+                          className='flex flex-col flex-grow group items-stretch relative space-y-2   '
+                          target='_blank'
+                          rel='noopener noreferrer'
+                          aria-label={exp.companyName}
+                        >
+                          <p className='flex items-center gap-1 text-sm'>
+                            <MdDateRange />
+                            {exp.period}
+                          </p>
+                          <h3 className='flex-grow font-semibold leading-none tracking-wide line-clamp-1'>
+                            {exp.role}
+                          </h3>
+                          <p className='line-clamp-1 text-muted-foreground'>{exp.companyName}</p>
+                          {/* <ul className='list-disc ml-5'>
+                            {exp.description.map((task, index) => (
+                              <li key={index}>{task}</li>
+                            ))}
+                          </ul> */}
+                          <div className='absolute w-0 transition-all duration-500 ease-primary group-hover:w-full h-0.5 bg-violet-500 rounded-md -bottom-2'></div>
+                        </Link>
+                      ))}
                     </div>
                   </CardContent>
                 </Card>
@@ -224,24 +197,24 @@ const About = () => {
                     <CardTitle>Education</CardTitle>
                     <CardDescription>Academic Background and Qualifications.</CardDescription>
                   </CardHeader>
-                  <CardContent className='space-y-6'>
-                    <Link
-                      href='https://www.aiub.edu/'
-                      className='space-y-2 group relative'
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      aria-label='AIUB'
-                    >
-                      <p className='flex items-center gap-1 text-sm'>
-                        <MdDateRange />
-                        2020 - 2023
-                      </p>
-                      <h3 className='font-semibold leading-none tracking-wide'>
-                        Bachelor of Science in Computer Science & Engineering
-                      </h3>
-                      <p>American International University-Bangladesh (AIUB)</p>
-                      <div className='absolute w-0 transition-all duration-500 ease-primary group-hover:w-full h-0.5 bg-violet-500 rounded-md -bottom-2'></div>
-                    </Link>
+                  <CardContent className='space-y-6 flex flex-wrap'>
+                    {educationData.map(edu => (
+                      <Link
+                        href={edu.institutionLink}
+                        key={edu.id}
+                        className='space-y-2 group relative'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        aria-label={edu.institutionName}
+                      >
+                        <p className='flex items-center gap-1 text-sm'>
+                          <MdDateRange /> {edu.period}
+                        </p>
+                        <h3 className='font-semibold leading-none tracking-wide'>{edu.degree}</h3>
+                        <p className='line-clamp-1 text-muted-foreground'>{edu.institutionName}</p>
+                        <div className='absolute w-0 transition-all duration-500 ease-primary group-hover:w-full h-0.5 bg-violet-500 rounded-md -bottom-2'></div>
+                      </Link>
+                    ))}
                   </CardContent>
                 </Card>
               </TabsContent>

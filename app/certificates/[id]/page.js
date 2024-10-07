@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import projects from '@/public/data/projects';
+import certificationsData from '@/public/data/certifications';
 import { useParams, notFound } from 'next/navigation';
 import ResumeViewer from '@/components/ResumeViewer';
 
@@ -10,7 +10,7 @@ export default function CertificateDetail() {
   const { id } = useParams();
   useEffect(() => {
     if (id) {
-      const cert = projects.find(cert => cert.id === Number(id)); // Find certificate by id
+      const cert = certificationsData?.find(cert => cert.id === Number(id)); // Find certificate by id
       setCertificate(cert);
     }
   }, [id]); // Add id as a dependency for useEffect

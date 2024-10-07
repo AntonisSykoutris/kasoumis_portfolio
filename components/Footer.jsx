@@ -7,7 +7,7 @@ const Footer = () => {
     <>
       <div className='flex justify-center translate-y-[1px]'>
         <div className='w-3/4'>
-          <div className='w-full h-[1px] bg-gradient-to-r from-transparent via-violet-500 to-transparent'></div>
+          <div className='w-full h-[1px] bg-gradient-to-r from-transparent  via-[#8b5cf6] to-transparent'></div>
         </div>
       </div>
       <footer className='container flex flex-col-reverse md:flex-row items-center justify-center gap-3 py-3 text-sm border-t md:justify-between border-t-border'>
