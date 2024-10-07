@@ -12,13 +12,14 @@ import kasoumisWhite from '/public/img/kasoumis-dark.webp';
 import kasoumisDark from '/public/img/kasoumis-dark.webp';
 import AnimatedGridPattern from '@/components/ui/animated-grid-pattern';
 import { cn } from '@/lib/utils';
+import SparklesText from '@/components/ui/sparkles-text';
 
 import useScrollSpy from '@/hook/useScrollSpy';
 import useMobileDetect from '@/hook/useMobileDetect';
 
 import { useInView } from 'framer-motion';
 import Image from 'next/image';
-import { HERO_NAME, HERO_DESCRIPTION } from '@/public/data/hero';
+import { HERO_NAME, HERO_SUBTITLE, HERO_DESCRIPTION } from '@/public/data/hero';
 
 const uptoDown = {
   initial: {
@@ -120,19 +121,16 @@ const Hero = () => {
         >
           <motion.h1
             variants={uptoDownItem}
-            className='text-4xl font-extrabold tracking-tight text-left text-transparent capitalize xs:text-5xl md:h-20 md:text-6xl lg:text-7xl bg-gradient-to-r from-blue-500 via-blue-400 to-blue-600 bg-clip-text w-fit scroll-m-20'
+            className='text-4xl font-extrabold tracking-tight text-left text-transparent capitalize xs:text-5xl md:h-20 md:text-6xl lg:text-7xl bg-gradient-to-r from-[#8b5cf6] via-[#ffaa40] to-[#8b5cf6] bg-clip-text w-fit scroll-m-20'
           >
             {HERO_NAME}
           </motion.h1>
           <motion.h2
             variants={uptoDownItem}
-            className='pb-2 text-3xl font-semibold tracking-tight border-b min-h-12 lg:mt-3 border-b-border scroll-m-20 first:mt-0'
+            className='pb-2 text-3xl flex items-center font-semibold tracking-tight border-b min-h-12 lg:mt-3 border-b-border scroll-m-20 first:mt-0'
           >
-            <Typewriter
-              texts={[`Frontend Developer${multipleSpaces}`, `Converting Ideas to User Interface${multipleSpaces}`]}
-              speed={100}
-              isInView={isInView}
-            />
+            {HERO_SUBTITLE}&nbsp;
+            <SparklesText sparklesCount={5} className={'text-3xl  tracking-tight'} text='Product Manager' />
           </motion.h2>
           <motion.p variants={uptoDownItem} className='text-lg lg:text-justify leading-7 [&:not(:first-child)]:mt-3'>
             {HERO_DESCRIPTION}
