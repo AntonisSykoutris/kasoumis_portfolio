@@ -13,7 +13,7 @@ export const certificationsData = [
     organization: 'IBM',
     date: 'Completed: 2023',
     file: 'product-management-an-introduction',
-    image: '/path-to-image/product-management-an-introduction.png',
+    image: '/img/one.png',
   },
   {
     id: '3',
@@ -21,7 +21,7 @@ export const certificationsData = [
     organization: 'Google',
     date: 'Completed: 2023',
     file: 'advanced-google-analytics',
-    image: '/path-to-image/google-analytics.png',
+    image: '/img/one.png',
   },
   {
     id: '4',
@@ -29,7 +29,7 @@ export const certificationsData = [
     organization: 'Google',
     date: 'Completed: 2023',
     file: 'agile-project-management',
-    image: '/path-to-image/agile-project-management.png',
+    image: '/img/one.png',
   },
   {
     id: '5',
@@ -37,7 +37,7 @@ export const certificationsData = [
     organization: 'Google',
     date: 'Completed: 2023',
     file: 'foundations-digital-marketing',
-    image: '/path-to-image/foundations-digital-marketing.png',
+    image: '/img/one.png',
   },
   {
     id: '6',
@@ -45,7 +45,7 @@ export const certificationsData = [
     organization: 'Google',
     date: 'Completed: 2023',
     file: 'foundations-of-project-management',
-    image: '/path-to-image/foundations-of-project-management.png',
+    image: '/img/one.png',
   },
   // Add more certifications as needed
 ];
