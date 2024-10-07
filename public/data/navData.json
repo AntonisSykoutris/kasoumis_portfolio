@@ -1,6 +1,6 @@
 [
   { "text": "home", "path": "/" },
   { "text": "about", "path": "/#about" },
-  { "text": "projects", "path": "/#projects" },
+  { "text": "certifications", "path": "/#certifications" },
   { "text": "contact", "path": "/#contact" }
 ]
