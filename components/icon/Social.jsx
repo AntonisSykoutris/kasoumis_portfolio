@@ -1,4 +1,10 @@
-import { FaFacebook, FaFacebookMessenger, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import {
+  FaFacebook,
+  FaFacebookMessenger,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
 const socialIcons = [
@@ -9,22 +15,22 @@ const socialIcons = [
   },
   {
     Icon: FaFacebook,
-    link: 'https://www.facebook.com/Giannis Kasoumis',
+    link: '',
     label: 'Facebook',
   },
   {
     Icon: FaFacebookMessenger,
-    link: 'https://m.me/Giannis Kasoumis',
+    link: '',
     label: 'Messanger',
   },
   {
     Icon: FaTwitter,
-    link: 'https://m.me/Giannis Kasoumis',
+    link: '',
     label: 'Messanger',
   },
   {
     Icon: FaInstagram,
-    link: 'https://www.instagram.com/giannis_kasoumis/',
+    link: '',
     label: 'Instagram',
   },
   {
