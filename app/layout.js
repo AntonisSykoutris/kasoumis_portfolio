@@ -34,29 +34,28 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: 'Kasoumis Giannis | Frontend Developer',
-  description:
-    'Kasoumis Giannis is a passionate Frontend Developer dedicated to crafting immersive UI experiences with React and Next.js. Known for clean code and elegant interfaces.',
+  title: 'Kasoumis Giannis | Product Manager',
+  description: 'Kasoumis Giannis is a passionate Product Manager.',
   keywords:
-    'Kasoumis Giannis, Frontend Developer, React Developer, Next.js Developer, Web Developer, UI Developer, Web Development, JavaScript, HTML, CSS',
+    'Kasoumis Giannis, Product Manager, Project Manager, Web Development.',
   author: 'Kasoumis Giannis',
   robots: 'index, follow',
   canonical: 'https://kasoumis-portfolio.vercel.app',
   openGraph: {
     ...openGraphImage,
-    title: 'Kasoumis Giannis | Frontend Developer',
+    title: 'Kasoumis Giannis | Product Manager',
     type: 'website',
     url: 'https://kasoumis-portfolio.vercel.app/',
     description:
-      'Kasoumis Giannis is a passionate Frontend Developer who excels in creating engaging UI experiences with a focus on React and Next.js. Explore his portfolio to see his work.',
+      'Kasoumis Giannis is a passionate Product Manager. Explore his portfolio to see his work.',
     site_name: 'Kasoumis Giannis Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
     site: '@Gkasoumis',
-    title: 'Kasoumis Giannis | Frontend Developer',
+    title: 'Kasoumis Giannis | Product Manager',
     description:
-      'Discover the work of Kasoumis Giannis, a dedicated Frontend Developer specializing in React and Next.js, known for clean code and beautiful UI designs.',
+      'Discover the work of Kasoumis Giannis, a dedicated Product Manager.',
     image: 'https://kasoumis-portfolio.vercel.app/img/ogImage.webp',
   },
 };
@@ -64,8 +63,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en' suppressHydrationWarning={true} className='!scroll-smooth'>
-      <body className={cn('bg-background font-lato antialiased ', lato.variable, oswald.variable, playfair.variable)}>
-        <ThemeProvider attribute='class' defaultTheme='dark' enableSystem disableTransitionOnChange>
+      <body
+        className={cn(
+          'bg-background font-lato antialiased ',
+          lato.variable,
+          oswald.variable,
+          playfair.variable
+        )}
+      >
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='dark'
+          enableSystem
+          disableTransitionOnChange
+        >
           <Navbar />
           {children}
           <Toaster />
