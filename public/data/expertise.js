@@ -56,16 +56,24 @@ export const EXPERTIES = [
 ];
 
 export const experienceData = [
-  {
+    {
     id: 1,
-    companyLink: 'https://aegeanair.com',
-    companyName: 'Aegean Airlines',
-    role: 'Digital Product Development Business Analyst',
-    period: 'April 2024 – Present',
+    companyLink: 'https://www.verityguest.com/',
+    companyName: 'Verity Guest',
+    role: 'Product Manager',
+    period: 'April 2025 – Present',
     description: ['Collected quantitative product data and metrics through market research.'],
   },
   {
     id: 2,
+    companyLink: 'https://aegeanair.com',
+    companyName: 'Aegean Airlines',
+    role: 'Digital Product Development Business Analyst',
+    period: 'April 2024 – April 2025',
+    description: ['Collected quantitative product data and metrics through market research.'],
+  },
+  {
+    id: 3,
     companyLink: 'https://carnegieconsultants.com',
     companyName: 'Carnegie Consultants',
     role: 'Junior CRM Administrator',
@@ -73,7 +81,7 @@ export const experienceData = [
     description: ['Supported senior team members in generating reports and analyzing data for decision-making.'],
   },
   {
-    id: 3,
+    id: 4,
     companyLink: 'https://mfa.gr',
     companyName: 'Ministry of Foreign Affairs of the Hellenic Republic',
     role: 'Associate Project Manager',
@@ -81,7 +89,7 @@ export const experienceData = [
     description: ['Assisted in organizing project schedules, meetings, and appointments.'],
   },
   {
-    id: 4,
+    id: 5,
     companyLink: 'https://karamanlis.gr',
     companyName: 'The Konstantinos Karamanlis Institute for Democracy',
     role: 'Associate Project Manager',
