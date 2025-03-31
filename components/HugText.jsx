@@ -7,7 +7,7 @@ function Hero() {
   return (
     <section
       id='contact'
-      className=' h-fit lg:overflow-visible  rounded-xl relative flex flex-col justify-start lg:justify-center  items-center mt-10 lg:mt-[4rem] font-bold  '
+      className=' h-fit lg:overflow-visible  rounded-xl relative flex flex-col justify-start lg:justify-center  items-center mt-10 lg:mt-[4rem] pb-20 font-bold  '
     >
       <div className=' hidden absolute pointer-events-none inset-0 z-10 lg:flex items-center justify-center rounded-xl'></div>
       <HeroText />

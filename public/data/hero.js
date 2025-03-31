@@ -1,6 +1,6 @@
 export const HERO_NAME = 'Kasoumis Giannis';
 
-export const HERO_SUBTITLE = 'Your Friendly';
+export const HERO_SUBTITLE = 'Creative ';
 
 export const HERO_DESCRIPTION =
-  'Turning data into decisions and ideas into products. As a digital problem-solver, I thrive on building cool stuff that works—because why settle for less?';
+  'Passionate about building products that solve real problems, I thrive on innovation, collaboration, and data-driven decisions. With a strategic mindset and user-first approach, I create impactful, scalable solutions that drive growth and enhance experiences.';
