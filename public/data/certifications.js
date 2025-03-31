@@ -1,4 +1,4 @@
-export const CERTIFICATIONS_TITLE = 'Projects & Certifications';
+export const CERTIFICATIONS_TITLE = 'Projects';
 
 export const CERTIFICATIONS_SUBTITLE = 'Leveling Up: My Stack of Certifications!';
 
